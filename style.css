@@ -40,14 +40,14 @@ header table{
     margin:auto;
     border-collapse:collapse;
     background:white;
-    border-radius:8px;
     overflow:hidden;
-    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+    border-radius:8px;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
 }
 
 header td{
-    padding:12px 25px;
     border:1px solid #ff69b4;
+    padding:12px 25px;
 }
 
 header a{
@@ -57,14 +57,14 @@ header a{
 }
 
 header a:hover{
-    color:white;
     background:#ff69b4;
+    color:white;
     padding:5px 8px;
     border-radius:5px;
 }
 
 /* ==========================
-   PROFILE PHOTO
+   PROFILE
 ========================== */
 
 #profile{
@@ -78,58 +78,42 @@ header a:hover{
     object-fit:cover;
     border-radius:50%;
     border:5px solid #ff69b4;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
 }
 
 /* ==========================
-   ABOUT & SKILLS
+   TWO COLUMN LAYOUT
 ========================== */
 
 .about-skills{
-    width:80%;
-    margin:auto;
+    width:90%;
+    margin:40px auto;
     display:flex;
-    justify-content:space-between;
     gap:40px;
-    margin-bottom:50px;
+    align-items:flex-start;
 }
 
-#about{
+.left-column{
     width:60%;
 }
 
-#skills{
+.right-column{
     width:40%;
 }
 
-#about h2,
-#skills h2,
-#projects h2,
-#contact h2{
-    text-align:center;
-    color:#ff69b4;
-    margin-bottom:20px;
+#projects,
+#contact{
+    margin-top:40px;
 }
 
 /* ==========================
-   PROJECT & CONTACT
+   SECTION HEADINGS
 ========================== */
 
-.project-contact{
-    width:90%;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    gap:40px;
-    margin-bottom:50px;
-}
-
-#projects{
-    width:45%;
-}
-
-#contact{
-    width:50%;
+h2{
+    text-align:center;
+    color:#ff69b4;
+    margin-bottom:20px;
 }
 
 /* ==========================
@@ -169,7 +153,7 @@ tr:hover{
     background:#ffe4f1;
 }
 
-/* First column smaller */
+/* First column width */
 
 #about td:first-child,
 #skills td:first-child,
@@ -205,10 +189,10 @@ textarea:focus{
 input[type="submit"],
 input[type="reset"]{
     width:auto;
-    padding:10px 18px;
-    border:none;
+    padding:10px 20px;
     background:#ff69b4;
     color:white;
+    border:none;
     border-radius:5px;
     cursor:pointer;
     margin:5px;
@@ -225,6 +209,7 @@ input[type="reset"]:hover{
 
 a{
     color:#ff69b4;
+    font-weight:bold;
 }
 
 a:hover{
@@ -240,24 +225,25 @@ footer{
     color:white;
     text-align:center;
     padding:18px;
-    margin-top:40px;
+    margin-top:50px;
 }
 
 /* ==========================
-   MOBILE RESPONSIVE
+   RESPONSIVE DESIGN
 ========================== */
 
-@media screen and (max-width:900px){
+@media (max-width:900px){
 
-.about-skills,
-.project-contact{
+.about-skills{
     flex-direction:column;
 }
 
-#about,
-#skills,
-#projects,
-#contact{
+.left-column,
+.right-column{
+    width:100%;
+}
+
+header table{
     width:100%;
 }
 
@@ -265,21 +251,22 @@ header td{
     display:block;
 }
 
-header table{
-    width:100%;
+#projects,
+#contact{
+    margin-top:30px;
 }
 
 }
 
-@media screen and (max-width:600px){
+@media (max-width:600px){
 
 header h1{
     font-size:30px;
 }
 
 #profile img{
-    width:130px;
-    height:130px;
+    width:140px;
+    height:140px;
 }
 
 table{
