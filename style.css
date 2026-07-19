@@ -1,0 +1,294 @@
+/* ==========================
+   GENERAL STYLES
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#fff7fb;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+    background:#ff69b4;
+    padding:25px;
+    text-align:center;
+}
+
+header h1{
+    font-family:"Sofia", cursive;
+    color:white;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+/* ==========================
+   NAVIGATION
+========================== */
+
+header table{
+    margin:auto;
+    border-collapse:collapse;
+    background:white;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+header td{
+    padding:12px 25px;
+    border:1px solid #ff69b4;
+}
+
+header a{
+    text-decoration:none;
+    color:#ff69b4;
+    font-weight:bold;
+}
+
+header a:hover{
+    color:white;
+    background:#ff69b4;
+    padding:5px 8px;
+    border-radius:5px;
+}
+
+/* ==========================
+   PROFILE PHOTO
+========================== */
+
+#profile{
+    text-align:center;
+    margin:40px 0;
+}
+
+#profile img{
+    width:190px;
+    height:190px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #ff69b4;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ==========================
+   ABOUT & SKILLS
+========================== */
+
+.about-skills{
+    width:80%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    margin-bottom:50px;
+}
+
+#about{
+    width:60%;
+}
+
+#skills{
+    width:40%;
+}
+
+#about h2,
+#skills h2,
+#projects h2,
+#contact h2{
+    text-align:center;
+    color:#ff69b4;
+    margin-bottom:20px;
+}
+
+/* ==========================
+   PROJECT & CONTACT
+========================== */
+
+.project-contact{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    margin-bottom:50px;
+}
+
+#projects{
+    width:45%;
+}
+
+#contact{
+    width:50%;
+}
+
+/* ==========================
+   TABLES
+========================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+
+table,
+th,
+td{
+    border:1px solid #ddd;
+}
+
+th{
+    background:#ff69b4;
+    color:white;
+}
+
+th,
+td{
+    padding:12px;
+    text-align:left;
+    vertical-align:top;
+}
+
+tr:nth-child(even){
+    background:#fff2f7;
+}
+
+tr:hover{
+    background:#ffe4f1;
+}
+
+/* First column smaller */
+
+#about td:first-child,
+#skills td:first-child,
+#projects td:first-child,
+#contact td:first-child{
+    width:150px;
+    font-weight:bold;
+}
+
+/* ==========================
+   FORM
+========================== */
+
+input,
+textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:15px;
+}
+
+textarea{
+    resize:vertical;
+}
+
+input:focus,
+textarea:focus{
+    border-color:#ff69b4;
+    outline:none;
+}
+
+input[type="submit"],
+input[type="reset"]{
+    width:auto;
+    padding:10px 18px;
+    border:none;
+    background:#ff69b4;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+    margin:5px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover{
+    background:#e754a2;
+}
+
+/* ==========================
+   LINKS
+========================== */
+
+a{
+    color:#ff69b4;
+}
+
+a:hover{
+    color:#d63384;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    background:#ff69b4;
+    color:white;
+    text-align:center;
+    padding:18px;
+    margin-top:40px;
+}
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+
+@media screen and (max-width:900px){
+
+.about-skills,
+.project-contact{
+    flex-direction:column;
+}
+
+#about,
+#skills,
+#projects,
+#contact{
+    width:100%;
+}
+
+header td{
+    display:block;
+}
+
+header table{
+    width:100%;
+}
+
+}
+
+@media screen and (max-width:600px){
+
+header h1{
+    font-size:30px;
+}
+
+#profile img{
+    width:130px;
+    height:130px;
+}
+
+table{
+    font-size:14px;
+}
+
+input[type="submit"],
+input[type="reset"]{
+    width:100%;
+}
+
+}
